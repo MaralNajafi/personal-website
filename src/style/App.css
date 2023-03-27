@@ -1,0 +1,93 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600&display=swap");
+
+:root {
+  --ff-main: "Poppins", sans-serif;
+
+  --color-primary-dark: #0068c3;
+  --color-primary: #0074d9;
+  --color-primary-light: #1a82dd;
+}
+
+.container {
+  min-height: 100vh;
+  font-family: var(--ff-main);
+}
+
+.inner-container {
+  width: 80%;
+  margin: 0 auto;
+}
+
+.header-section {
+  padding-block: 1rem;
+}
+.main-header h1 {
+  text-transform: capitalize;
+  font-weight: 700;
+}
+
+.main-nav ul {
+  gap: 1rem;
+  font-size: 14px;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.main-nav .active {
+  color: var(--color-primary);
+}
+
+.main-nav li {
+  transition: all 200ms;
+}
+
+.main-nav li:hover {
+  color: var(--color-primary-dark);
+}
+
+.showcase {
+  margin-block-start: 4rem;
+  grid-template-columns: 2fr 1fr;
+  gap: 4rem;
+}
+
+.showcase__info span {
+  font-weight: 600;
+  font-size: 12px;
+  text-transform: uppercase;
+  color: rgba(0, 0, 0, 0.7);
+}
+
+.showcase__info h2 {
+  text-transform: uppercase;
+  font-weight: 500;
+  word-spacing: 5px;
+  margin-block-start: 1rem;
+}
+
+.showcase__info .my-position {
+  text-transform: capitalize;
+  font-size: 12px;
+  letter-spacing: 3px;
+  line-height: 10px;
+}
+
+.showcase__info .my-explanation {
+  margin-block: 1rem;
+  color: rgba(0, 0, 0, 0.8);
+  max-width: 35ch;
+}
+
+.btn-primary {
+  background-color: var(--color-primary);
+  padding: 0.5rem 1rem;
+  color: #ffffff;
+  text-transform: capitalize;
+  font-size: 0.9rem;
+  border-radius: 3px;
+  transition: all 250ms;
+}
+
+.btn-primary:hover {
+  background-color: var(--color-primary-dark);
+}
