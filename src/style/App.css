@@ -37,12 +37,13 @@
   color: var(--color-primary);
 }
 
-.main-nav li {
+/* .main-nav li {
   transition: all 200ms;
-}
+} */
 
 .main-nav li:hover {
   color: var(--color-primary-dark);
+  cursor: pointer;
 }
 
 .showcase {
