@@ -12,8 +12,8 @@
   min-height: 100vh;
   font-family: var(--ff-main);
   background-image: url(./media/wave.svg);
-  background-position: bottom; 
-  background-repeat: no-repeat; 
+  background-position: bottom;
+  background-repeat: no-repeat;
   background-size: auto;
   background-attachment: fixed;
 }
@@ -23,12 +23,24 @@
   margin: 0 auto;
 }
 
-
-.main-header h1 {
-  text-transform: capitalize;
-  font-weight: 700;
-  font-size: 24px;
+.main-header {
   padding-block-start: 1rem;
+}
+
+.my-name {
+  text-transform: uppercase;
+  font-weight: 500;
+  font-size: 24px;
+  word-spacing: 5px;
+  margin-block-start: 1rem;
+}
+
+.my-position {
+  text-transform: capitalize;
+  font-size: 12px;
+  font-weight: 400;
+  letter-spacing: 3px;
+  line-height: 10px;
 }
 
 .main-nav ul {
@@ -62,20 +74,6 @@
   font-size: 12px;
   text-transform: uppercase;
   color: rgba(0, 0, 0, 0.7);
-}
-
-.showcase__info h2 {
-  text-transform: uppercase;
-  font-weight: 500;
-  word-spacing: 5px;
-  margin-block-start: 1rem;
-}
-
-.showcase__info .my-position {
-  text-transform: capitalize;
-  font-size: 12px;
-  letter-spacing: 3px;
-  line-height: 10px;
 }
 
 .showcase__info .my-explanation {
