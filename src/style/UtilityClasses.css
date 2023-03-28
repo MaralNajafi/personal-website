@@ -46,6 +46,19 @@
   align-items: flex-start;
 }
 
+.flex-grow-1{
+  flex-grow: 1;
+}
+
+.gap-10px{
+  gap: 10px;
+}
+
+
 .d-grid {
   display: grid;
+}
+
+.td-underline{
+  text-decoration: underline;
 }
