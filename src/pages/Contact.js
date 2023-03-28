@@ -1,7 +1,11 @@
-import React from 'react'
+import React from "react";
+import Background from "../Components/Background";
+import ContactBox from "../Components/ContactBox";
 
 export default function Contact() {
   return (
-    <div>Contact</div>
-  )
+    <Background waveMode={"contact"}>
+      <ContactBox />
+    </Background>
+  );
 }
