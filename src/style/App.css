@@ -95,3 +95,99 @@
 .btn-primary:hover {
   background-color: var(--color-primary-dark);
 }
+
+.contact-box {
+  max-width: 800px;
+  height: 400px;
+  margin: 0 auto;
+  margin-block-start: 4rem;
+  border-radius: 5px;
+  overflow: hidden;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+}
+
+.contact-box__info {
+  background-color: var(--color-primary);
+  padding: 1rem 2rem;
+  color: #ffffff;
+}
+
+.contact-box__info h3 {
+  font-size: 24px;
+  font-weight: 500;
+  text-transform: capitalize;
+}
+
+.contact-box__info ul {
+  margin-top: 1rem;
+  gap: 10px;
+  font-weight: 300;
+}
+
+.contact-box__form {
+  background-color: #ffffff;
+  padding: 1rem 2rem;
+  flex-grow: 1;
+}
+
+.contact-box__form h3 {
+  font-weight: 400;
+  font-size: 24px;
+}
+
+.contact-box__form form {
+  margin-top: 1rem;
+  gap: 1.5rem;
+}
+
+.contact-box__form button{
+  align-self: flex-end;
+}
+
+.stack-input {
+  background: none;
+  border: none;
+  border-bottom: 1px solid #000;
+  outline: none;
+  height: 30px;
+  padding: 10px;
+}
+
+.stack-input::placeholder,
+.message-box__subject input::placeholder {
+  font-family: var(--ff-main);
+  text-transform: capitalize;
+  font-weight: 400;
+}
+
+.stack-input:hover,
+.stack-input:focus {
+  border-bottom-color: var(--color-primary-dark);
+}
+
+.message-box {
+  background-color: #f4f4f4;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.message-box__subject {
+  border-bottom: #ccc solid 1px;
+  height: 25px;
+  padding-block-end: 5px;
+  margin-block-end: 10px;
+}
+
+.message-box__subject input{
+  font-weight: 600;
+}
+
+.message-box__message textarea {
+  height: 100%;
+  width: 100%;
+  resize: none;
+  border: none;
+  outline: none;
+  font-family: var(--ff-main);
+  background: none;
+}
