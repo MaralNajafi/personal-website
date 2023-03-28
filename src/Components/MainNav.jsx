@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import NavListItem from "./NavListItem";
 
 export default function MainNav() {
-  const [navListItems, setNavListItems] = useState([
+  const navListItems = [
     {
       text: "home",
       path: "/",
@@ -18,7 +18,7 @@ export default function MainNav() {
       path: "contact",
       id: 3,
     },
-  ]);
+  ];
 
   const navListItem = navListItems.map((navListItem) => {
     return (
