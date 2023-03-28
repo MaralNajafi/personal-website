@@ -1,6 +1,6 @@
 import React from "react";
 
-export default function ContactBoxInfo({title}) {
+export default function ContactBoxInfo({ title }) {
   return (
     <div className="contact-box__info d-flex flex-col">
       <h3>{title}</h3>
