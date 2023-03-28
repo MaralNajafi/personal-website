@@ -18,12 +18,12 @@
   margin: 0 auto;
 }
 
-.header-section {
-  padding-block: 1rem;
-}
+
 .main-header h1 {
   text-transform: capitalize;
   font-weight: 700;
+  font-size: 24px;
+  padding-block-start: 1rem;
 }
 
 .main-nav ul {

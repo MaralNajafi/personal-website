@@ -1,14 +1,10 @@
 import React from "react";
-export default function NavListItem({ text, isActive, handleActive, id }) {
+import { NavLink } from "react-router-dom";
+
+export default function NavListItem({ text, isActive, id }) {
   return (
-    <li
-      className={isActive ? "active" : ""}
-      key={id}
-      onClick={() => {
-        handleActive(id);
-      }}
-    >
-      {text}
+    <li className={isActive ? "active" : ""} key={id}>
+      <NavLink to={`/${text}`}>{text}</NavLink>
     </li>
   );
 }
