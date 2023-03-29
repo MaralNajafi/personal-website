@@ -1,11 +1,14 @@
 import { useFormik } from "formik";
-import React from "react";
+import React, { useState } from "react";
 import * as Yup from "yup";
 import PrimaryButton from "../Buttons/PrimaryButton";
 import StackInput from "../Inputs/StackInput";
 import NonStackInput from "../Inputs/NonStackInput";
 
 export default function ContactBoxForm({ title }) {
+  const [isSubmit, setIsSubmit] = useState(false)
+  const [isPending, setIsPending] = useState(false)
+  const [isFailed, setIsFailed] = useState(false)
   const formik = useFormik({
     initialValues: {
       fullName: "",
@@ -15,15 +18,33 @@ export default function ContactBoxForm({ title }) {
     },
     validationSchema: Yup.object({
       fullName: Yup.string()
-        .max(30, "too long, must be less than 30ch*")
-        .min(10, "too short, must be more than 10ch*")
+        .max(30, "too long*")
+        .min(10, "too short*")
         .required("required*"),
       email: Yup.string().email("invalid email address").required("required*"),
       subject: Yup.string().required("required*"),
       message: Yup.string().required("required*"),
     }),
-    onSubmit: (values) => {
-      console.log(values);
+    onSubmit: async (values) => {
+      setIsPending(true);
+      const postAPI = await fetch("http://localhost:3000/messages", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(values),
+      }).then(()=>{
+        setIsPending(false)
+        setIsFailed(false)
+      }).catch(()=>{
+        setIsPending(false)
+        setIsFailed(true)
+      })
+      formik.handleReset();
+      setIsSubmit(true);
+      setTimeout(() => {
+        setIsSubmit(false);
+      }, 500);
     },
   });
   return (
@@ -40,7 +61,13 @@ export default function ContactBoxForm({ title }) {
           value={formik.values.fullName}
           onBlur={formik.handleBlur}
           onChange={formik.handleChange}
-          errorMessage= {formik.touched.fullName && formik.errors.fullName ? formik.errors.fullName : <br />}
+          errorMessage={
+            formik.touched.fullName && formik.errors.fullName ? (
+              formik.errors.fullName
+            ) : (
+              <br />
+            )
+          }
         />
         <StackInput
           name="email"
@@ -50,7 +77,13 @@ export default function ContactBoxForm({ title }) {
           value={formik.values.email}
           onBlur={formik.handleBlur}
           onChange={formik.handleChange}
-          errorMessage= {formik.touched.email && formik.errors.email ? formik.errors.email : <br />}
+          errorMessage={
+            formik.touched.email && formik.errors.email ? (
+              formik.errors.email
+            ) : (
+              <br />
+            )
+          }
         />
 
         <div className="message-box d-flex flex-col flex-grow-1">
@@ -92,8 +125,8 @@ export default function ContactBoxForm({ title }) {
             ></textarea>
           </div>
         </div>
-        <PrimaryButton type={"submit"} disabled={false} id={"submitBtn"}>
-          {"submit"}
+        <PrimaryButton type={"submit"} disabled={isSubmit || isPending ? true : false} id={"submitBtn"}>
+          {isPending ? "sending" : isFailed? "try again" : isSubmit ? "sent" : "send"}
         </PrimaryButton>
       </form>
     </div>

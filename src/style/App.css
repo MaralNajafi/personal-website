@@ -6,6 +6,7 @@
   --color-primary-dark: #0068c3;
   --color-primary: #0074d9;
   --color-primary-light: #1a82dd;
+  --color-primary-disabled: #71abdd;
 }
 
 .container {
@@ -91,11 +92,16 @@
   text-transform: capitalize;
   font-size: 0.9rem;
   border-radius: 3px;
-  transition: all 250ms;
+  transition: all 300ms;
 }
 
 .btn-primary:hover {
   background-color: var(--color-primary-dark);
+}
+
+.btn-primary:disabled{
+  background-color: var(--color-primary-disabled);
+  cursor: default;
 }
 
 .contact-box {
