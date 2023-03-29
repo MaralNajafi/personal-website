@@ -6,9 +6,9 @@ import StackInput from "../Inputs/StackInput";
 import NonStackInput from "../Inputs/NonStackInput";
 
 export default function ContactBoxForm({ title }) {
-  const [isSubmit, setIsSubmit] = useState(false)
-  const [isPending, setIsPending] = useState(false)
-  const [isFailed, setIsFailed] = useState(false)
+  const [isSubmit, setIsSubmit] = useState(false);
+  const [isPending, setIsPending] = useState(false);
+  const [isFailed, setIsFailed] = useState(false);
   const formik = useFormik({
     initialValues: {
       fullName: "",
@@ -33,18 +33,20 @@ export default function ContactBoxForm({ title }) {
           "Content-Type": "application/json",
         },
         body: JSON.stringify(values),
-      }).then(()=>{
-        setIsPending(false)
-        setIsFailed(false)
-      }).catch(()=>{
-        setIsPending(false)
-        setIsFailed(true)
       })
-      formik.handleReset();
-      setIsSubmit(true);
-      setTimeout(() => {
-        setIsSubmit(false);
-      }, 500);
+        .then(() => {
+          setIsSubmit(true);
+          setTimeout(() => {
+            setIsSubmit(false);
+          }, 500);
+          setIsPending(false);
+          setIsFailed(false);
+          formik.handleReset();
+        })
+        .catch(() => {
+          setIsPending(false);
+          setIsFailed(true);
+        });
     },
   });
   return (
@@ -125,8 +127,18 @@ export default function ContactBoxForm({ title }) {
             ></textarea>
           </div>
         </div>
-        <PrimaryButton type={"submit"} disabled={isSubmit || isPending ? true : false} id={"submitBtn"}>
-          {isPending ? "sending" : isFailed? "try again" : isSubmit ? "sent" : "send"}
+        <PrimaryButton
+          type={"submit"}
+          disabled={isSubmit || isPending ? true : false}
+          id={"submitBtn"}
+        >
+          {isPending
+            ? "sending"
+            : isFailed
+            ? "try again"
+            : isSubmit
+            ? "sent"
+            : "send"}
         </PrimaryButton>
       </form>
     </div>
