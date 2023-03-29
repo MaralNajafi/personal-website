@@ -1,6 +1,6 @@
 import React from "react";
-import InnerContainer from "./InnerContainer";
-import ShowcaseInfo from "./ShowcaseInfo";
+import InnerContainer from "../InnerContainer";
+import ShowcaseInfo from "../SideBars/ShowcaseInfo";
 
 export default function Showcase() {
   return (

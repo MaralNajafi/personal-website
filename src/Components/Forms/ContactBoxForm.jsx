@@ -1,6 +1,7 @@
 import { useFormik } from "formik";
 import React from "react";
 import * as Yup from "yup";
+import PrimaryButton from "../Buttons/PrimaryButton";
 
 export default function ContactBoxForm({ title }) {
   const formik = useFormik({
@@ -41,7 +42,9 @@ export default function ContactBoxForm({ title }) {
             onChange={formik.handleChange}
           />
           {formik.errors.fullName ? (
-            <p className="error-message">{formik.touched.fullName && formik.errors.fullName}</p>
+            <p className="error-message">
+              {formik.touched.fullName && formik.errors.fullName}
+            </p>
           ) : null}
         </div>
         <div className="d-flex flex-col">
@@ -55,7 +58,9 @@ export default function ContactBoxForm({ title }) {
             onChange={formik.handleChange}
           />
           {formik.errors.email ? (
-            <p className="error-message">{formik.touched.email && formik.errors.email}</p>
+            <p className="error-message">
+              {formik.touched.email && formik.errors.email}
+            </p>
           ) : null}
         </div>
 
@@ -65,9 +70,15 @@ export default function ContactBoxForm({ title }) {
               name="subject"
               type="text"
               className={`"flex-grow-1" ${
-                formik.touched.subject && formik.errors.subject ? "error-style" : ""
+                formik.touched.subject && formik.errors.subject
+                  ? "error-style"
+                  : ""
               }`}
-              placeholder={formik.touched.subject && formik.errors.subject ? "subject*" : "subject"}
+              placeholder={
+                formik.touched.subject && formik.errors.subject
+                  ? "subject*"
+                  : "subject"
+              }
               value={formik.values.subject}
               onBlur={formik.handleBlur}
               onChange={formik.handleChange}
@@ -76,17 +87,25 @@ export default function ContactBoxForm({ title }) {
           <div className="d-flex flex-grow-1 message-box__message">
             <textarea
               name="message"
-              placeholder={formik.touched.message && formik.errors.message ? "message*" : "message"}
+              placeholder={
+                formik.touched.message && formik.errors.message
+                  ? "message*"
+                  : "message"
+              }
               value={formik.values.message}
               onBlur={formik.handleBlur}
               onChange={formik.handleChange}
-              className={formik.touched.message && formik.errors.subject ? "error-style" : ""}
+              className={
+                formik.touched.message && formik.errors.subject
+                  ? "error-style"
+                  : ""
+              }
             ></textarea>
           </div>
         </div>
-        <button type="submit" className="btn-primary">
-          submit
-        </button>
+        <PrimaryButton type={"submit"} disabled={false} id={"submitBtn"}>
+          {"submit"}
+        </PrimaryButton>
       </form>
     </div>
   );
