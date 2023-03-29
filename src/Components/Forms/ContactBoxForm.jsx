@@ -2,6 +2,8 @@ import { useFormik } from "formik";
 import React from "react";
 import * as Yup from "yup";
 import PrimaryButton from "../Buttons/PrimaryButton";
+import StackInput from "../Inputs/StackInput";
+import NonStackInput from "../Inputs/NonStackInput";
 
 export default function ContactBoxForm({ title }) {
   const formik = useFormik({
@@ -31,42 +33,29 @@ export default function ContactBoxForm({ title }) {
         onSubmit={formik.handleSubmit}
         className="d-flex flex-col flex-grow-1"
       >
-        <div className="d-flex flex-col">
-          <input
-            name="fullName"
-            type="text"
-            className="stack-input"
-            placeholder="Full Name"
-            value={formik.values.fullName}
-            onBlur={formik.handleBlur}
-            onChange={formik.handleChange}
-          />
-          {formik.errors.fullName ? (
-            <p className="error-message">
-              {formik.touched.fullName && formik.errors.fullName}
-            </p>
-          ) : null}
-        </div>
-        <div className="d-flex flex-col">
-          <input
-            name="email"
-            type="text"
-            className="stack-input"
-            placeholder="email"
-            value={formik.values.email}
-            onBlur={formik.handleBlur}
-            onChange={formik.handleChange}
-          />
-          {formik.errors.email ? (
-            <p className="error-message">
-              {formik.touched.email && formik.errors.email}
-            </p>
-          ) : null}
-        </div>
+        <StackInput
+          name="fullName"
+          type="text"
+          placeholder="Full Name"
+          value={formik.values.fullName}
+          onBlur={formik.handleBlur}
+          onChange={formik.handleChange}
+          errorMessage= {formik.touched.fullName && formik.errors.fullName ? formik.errors.fullName : <br />}
+        />
+        <StackInput
+          name="email"
+          type="text"
+          className="stack-input"
+          placeholder="email"
+          value={formik.values.email}
+          onBlur={formik.handleBlur}
+          onChange={formik.handleChange}
+          errorMessage= {formik.touched.email && formik.errors.email ? formik.errors.email : <br />}
+        />
 
         <div className="message-box d-flex flex-col flex-grow-1">
           <div className="d-flex message-box__subject">
-            <input
+            <NonStackInput
               name="subject"
               type="text"
               className={`"flex-grow-1" ${

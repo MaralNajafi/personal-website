@@ -139,7 +139,7 @@
 
 .contact-box__form form {
   margin-top: 1rem;
-  gap: 1.5rem;
+  gap: 10px;
 }
 
 .contact-box__form button {
@@ -182,6 +182,7 @@
 
 .message-box__subject input {
   font-weight: 600;
+  width: 100%;
 }
 
 .message-box__message textarea {
