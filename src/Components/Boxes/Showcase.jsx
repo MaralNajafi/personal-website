@@ -1,5 +1,5 @@
 import React from "react";
-import InnerContainer from "../InnerContainer";
+import InnerContainer from "../Containers/InnerContainer";
 import ShowcaseInfo from "../SideBars/ShowcaseInfo";
 
 export default function Showcase() {
