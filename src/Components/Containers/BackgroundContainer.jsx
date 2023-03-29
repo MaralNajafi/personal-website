@@ -1,6 +1,6 @@
 import React from "react";
-import wave from "../style/media/wave.svg";
-import wave2 from "../style/media/wave-2.svg";
+import wave from "../../style/media/wave.svg";
+import wave2 from "../../style/media/wave-2.svg";
 
 export default function Background({ children, waveMode }) {
   return (

@@ -1,11 +1,11 @@
 import React from "react";
-import Me from "./Me";
-import MainNav from "./MainNav";
+import MeBox from "../Boxes/MeBox";
+import MainNav from "../Navigation/MainNav";
 
 export default function MainHeader() {
   return (
     <header className="main-header d-flex jc-space-between ai-center">
-      <Me name={"maral najafi"} position={"front end developer"} />
+      <MeBox name={"maral najafi"} position={"front end developer"} />
       <MainNav />
     </header>
   );

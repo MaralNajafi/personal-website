@@ -1,10 +1,10 @@
 import React from "react";
-import Background from "../Components/Background";
+import BackgroundContainer from "../Components/Containers/BackgroundContainer";
 import ShowcaseBox from "../Components/Boxes/ShowcaseBox";
 export default function Home() {
   return (
-    <Background waveMode={"home"}>
+    <BackgroundContainer waveMode={"home"}>
       <ShowcaseBox />
-    </Background>
+    </BackgroundContainer>
   );
 }
