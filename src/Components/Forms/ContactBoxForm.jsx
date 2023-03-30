@@ -4,6 +4,7 @@ import * as Yup from "yup";
 import PrimaryButton from "../Buttons/PrimaryButton";
 import StackInput from "../Inputs/StackInput";
 import NonStackInput from "../Inputs/NonStackInput";
+import MessageBox from "../Boxes/MessageBox/MessageBox";
 
 export default function ContactBoxForm({ title }) {
   const [isSubmit, setIsSubmit] = useState(false);
@@ -13,7 +14,7 @@ export default function ContactBoxForm({ title }) {
     initialValues: {
       fullName: "",
       email: "",
-      subject: "",
+      info: "",
       message: "",
     },
     validationSchema: Yup.object({
@@ -27,14 +28,16 @@ export default function ContactBoxForm({ title }) {
     }),
     onSubmit: async (values) => {
       setIsPending(true);
-      const postAPI = await fetch("http://localhost:3000/messages", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(values),
-      })
-        .then(() => {
+
+      try {
+        const postAPI = await fetch("http://localhost:3000/messages", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify(values),
+        });
+        if (postAPI.ok) {
           setIsSubmit(true);
           setTimeout(() => {
             setIsSubmit(false);
@@ -42,11 +45,14 @@ export default function ContactBoxForm({ title }) {
           setIsPending(false);
           setIsFailed(false);
           formik.handleReset();
-        })
-        .catch(() => {
-          setIsPending(false);
-          setIsFailed(true);
-        });
+        } else {
+          throw new Error("error");
+        }
+      } catch (error) {
+        setIsPending(false);
+        setIsFailed(true);
+        console.log("failed");
+      }
     },
   });
   return (
@@ -88,45 +94,41 @@ export default function ContactBoxForm({ title }) {
           }
         />
 
-        <div className="message-box d-flex flex-col flex-grow-1">
-          <div className="d-flex message-box__subject">
-            <NonStackInput
-              name="subject"
-              type="text"
-              className={`"flex-grow-1" ${
-                formik.touched.subject && formik.errors.subject
-                  ? "error-style"
-                  : ""
-              }`}
-              placeholder={
-                formik.touched.subject && formik.errors.subject
-                  ? "subject*"
-                  : "subject"
-              }
-              value={formik.values.subject}
-              onBlur={formik.handleBlur}
-              onChange={formik.handleChange}
-            />
-          </div>
-          <div className="d-flex flex-grow-1 message-box__message">
-            <textarea
-              name="message"
-              placeholder={
-                formik.touched.message && formik.errors.message
-                  ? "message*"
-                  : "message"
-              }
-              value={formik.values.message}
-              onBlur={formik.handleBlur}
-              onChange={formik.handleChange}
-              className={
-                formik.touched.message && formik.errors.subject
-                  ? "error-style"
-                  : ""
-              }
-            ></textarea>
-          </div>
-        </div>
+        <MessageBox
+          subject={{
+            name: "subject",
+            type: "text",
+            className: `"flex-grow-1" ${
+              formik.touched.subject && formik.errors.subject
+                ? "error-style"
+                : ""
+            }`,
+            placeholder:
+              formik.touched.subject && formik.errors.subject
+                ? "subject*"
+                : "subject",
+            value: formik.values.subject,
+            onBlur: formik.handleBlur,
+            onChange: formik.onChange,
+          }}
+          info={{
+            name: "message",
+            type: "text",
+            className:
+              formik.touched.message && formik.errors.message
+                ? "error-style"
+                : "",
+
+            placeholder:
+              formik.touched.message && formik.errors.message
+                ? "message*"
+                : "message",
+            value: formik.values.message,
+            onBlur: formik.handleBlur,
+            onChange: formik.handleChange,
+          }}
+        />
+
         <PrimaryButton
           type={"submit"}
           disabled={isSubmit || isPending ? true : false}
