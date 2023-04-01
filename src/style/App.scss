@@ -5,6 +5,7 @@
 .container {
   min-height: 100vh;
   font-family: $ff-main;
+  transition: background-image 100ms;
 }
 
 .inner-container {
