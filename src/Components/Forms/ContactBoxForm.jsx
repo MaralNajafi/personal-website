@@ -3,7 +3,6 @@ import React, { useState } from "react";
 import * as Yup from "yup";
 import PrimaryButton from "../Buttons/PrimaryButton";
 import StackInput from "../Inputs/StackInput";
-import NonStackInput from "../Inputs/NonStackInput";
 import MessageBox from "../Boxes/MessageBox/MessageBox";
 
 export default function ContactBoxForm({ title }) {
@@ -14,7 +13,7 @@ export default function ContactBoxForm({ title }) {
     initialValues: {
       fullName: "",
       email: "",
-      info: "",
+      subject: "",
       message: "",
     },
     validationSchema: Yup.object({
@@ -109,7 +108,7 @@ export default function ContactBoxForm({ title }) {
                 : "subject",
             value: formik.values.subject,
             onBlur: formik.handleBlur,
-            onChange: formik.onChange,
+            onChange: formik.handleChange,
           }}
           info={{
             name: "message",
