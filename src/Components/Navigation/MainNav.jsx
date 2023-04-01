@@ -25,8 +25,6 @@ export default function MainNav() {
       <NavListItem
         text={navListItem.text}
         path={navListItem.path}
-        isActive={navListItem.isActive}
-        id={navListItem.id}
         key={navListItem.id}
       />
     );
