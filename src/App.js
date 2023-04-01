@@ -1,5 +1,4 @@
 import "./style/Reset.scss";
-import "./style/UtilityClasses.scss";
 import "./style/App.scss";
 import Layout from "./pages/Layout";
 import Home from "./pages/Home";
