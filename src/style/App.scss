@@ -1,6 +1,6 @@
-@import 'config';
-@import 'reset';
-@import 'utilities';
+@import "config";
+@import "reset";
+@import "utilities";
 
 .container {
   min-height: 100vh;
@@ -91,7 +91,7 @@
   background-color: $color-primary-dark;
 }
 
-.btn-primary:disabled{
+.btn-primary:disabled {
   background-color: $color-primary-disabled;
   cursor: default;
 }
@@ -193,11 +193,11 @@
   background: none;
 }
 
-.error-message{
+.error-message {
   font-size: 12px;
   color: red;
 }
 
-.error-style::placeholder{
+.error-style::placeholder {
   color: red;
 }
