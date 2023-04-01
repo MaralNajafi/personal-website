@@ -6,7 +6,7 @@ export default function MessageBoxInfo() {
   return (
     <div className="d-flex flex-grow-1 message-box__message">
       <textarea
-       {...messageBoxData.info}
+       {...messageBoxData.message}
       ></textarea>
     </div>
   );

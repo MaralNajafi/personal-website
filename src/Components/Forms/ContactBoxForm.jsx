@@ -111,7 +111,7 @@ export default function ContactBoxForm({ title }) {
               onBlur: formik.handleBlur,
               onChange: formik.handleChange,
             },
-            info: {
+            message: {
               name: "message",
               type: "text",
               className:
