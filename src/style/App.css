@@ -27,7 +27,7 @@
 }
 
 .main-header {
-  padding-block-start: 1rem;
+  padding-block: 1rem;
 }
 
 .my-name {
@@ -35,7 +35,6 @@
   font-weight: 500;
   font-size: 24px;
   word-spacing: 5px;
-  margin-block-start: 1rem;
 }
 
 .my-position {
