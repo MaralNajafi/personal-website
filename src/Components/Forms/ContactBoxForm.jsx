@@ -4,7 +4,7 @@ import * as Yup from "yup";
 import PrimaryButton from "../Buttons/PrimaryButton";
 import StackInput from "../Inputs/StackInput";
 import MessageBox from "../Boxes/MessageBox/MessageBox";
-
+import MessageBoxContext from "../../context/MessageBoxContext";
 export default function ContactBoxForm({ title }) {
   const [isSubmit, setIsSubmit] = useState(false);
   const [isPending, setIsPending] = useState(false);
@@ -29,7 +29,7 @@ export default function ContactBoxForm({ title }) {
       setIsPending(true);
 
       try {
-        const postAPI = await fetch("http://localhost:3000/messages", {
+        const postAPI = await fetch("http://localhost:3004/messages", {
           method: "POST",
           headers: {
             "Content-Type": "application/json",
@@ -93,41 +93,44 @@ export default function ContactBoxForm({ title }) {
           }
         />
 
-        <MessageBox
-          subject={{
-            name: "subject",
-            type: "text",
-            className: `"flex-grow-1" ${
-              formik.touched.subject && formik.errors.subject
-                ? "error-style"
-                : ""
-            }`,
-            placeholder:
-              formik.touched.subject && formik.errors.subject
-                ? "subject*"
-                : "subject",
-            value: formik.values.subject,
-            onBlur: formik.handleBlur,
-            onChange: formik.handleChange,
-          }}
-          info={{
-            name: "message",
-            type: "text",
-            className:
-              formik.touched.message && formik.errors.message
-                ? "error-style"
-                : "",
+        <MessageBoxContext.Provider
+          value={{
+            subject: {
+              name: "subject",
+              type: "text",
+              className: `"flex-grow-1" ${
+                formik.touched.subject && formik.errors.subject
+                  ? "error-style"
+                  : ""
+              }`,
+              placeholder:
+                formik.touched.subject && formik.errors.subject
+                  ? "subject*"
+                  : "subject",
+              value: formik.values.subject,
+              onBlur: formik.handleBlur,
+              onChange: formik.handleChange,
+            },
+            info: {
+              name: "message",
+              type: "text",
+              className:
+                formik.touched.message && formik.errors.message
+                  ? "error-style"
+                  : "",
 
-            placeholder:
-              formik.touched.message && formik.errors.message
-                ? "message*"
-                : "message",
-            value: formik.values.message,
-            onBlur: formik.handleBlur,
-            onChange: formik.handleChange,
+              placeholder:
+                formik.touched.message && formik.errors.message
+                  ? "message*"
+                  : "message",
+              value: formik.values.message,
+              onBlur: formik.handleBlur,
+              onChange: formik.handleChange,
+            },
           }}
-        />
-
+        >
+          <MessageBox />
+        </MessageBoxContext.Provider>
         <PrimaryButton
           type={"submit"}
           disabled={isSubmit || isPending ? true : false}
