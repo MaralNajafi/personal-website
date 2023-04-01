@@ -1,6 +1,6 @@
-import "./style/Reset.css";
-import "./style/UtilityClasses.css";
-import "./style/App.css";
+import "./style/Reset.scss";
+import "./style/UtilityClasses.scss";
+import "./style/App.scss";
 import Layout from "./pages/Layout";
 import Home from "./pages/Home";
 import About from "./pages/About";
