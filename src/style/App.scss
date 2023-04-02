@@ -17,19 +17,23 @@
   padding-block: 1rem;
 }
 
+.me-wrapper{
+
+}
+
 .my-name {
   text-transform: uppercase;
   font-weight: 500;
-  font-size: 24px;
-  word-spacing: 5px;
+  font-size: 1.5em;
+  word-spacing: 0.2em;
 }
 
 .my-position {
   text-transform: capitalize;
-  font-size: 12px;
+  font-size: 0.75em;
   font-weight: 400;
-  letter-spacing: 3px;
-  line-height: 10px;
+  letter-spacing: 0.25em;
+  line-height: 0.75em;
 }
 
 .main-nav ul {
@@ -210,4 +214,16 @@
 
 .error-style::placeholder {
   color: red;
+}
+
+.main-footer {
+  margin-top: auto;
+}
+
+.main-footer__data {
+  font-size: 12px;
+  margin-top: 1rem;
+  padding-block: 2rem;
+  border-top: 1px solid #cbcbcb;
+  min-height: 300px;
 }
