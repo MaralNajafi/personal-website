@@ -1,6 +1,5 @@
-import React, { useState } from "react";
 import NavListItem from "./NavListItem";
-import SVGListItem from "../ListItems/SVGListItem"
+import Tooltip from "../Tooltip/Tooltip";
 
 export default function MainNav() {
   const navListItems = [
@@ -23,11 +22,17 @@ export default function MainNav() {
 
   const navListItem = navListItems.map((navListItem) => {
     return (
-      <NavListItem
-        path={navListItem.path}
-        key={navListItem.id}
-      >
-        <SVGListItem svgID={navListItem.name} gap={5}><span className="responsive-d-none">{navListItem.name}</span></SVGListItem>
+      <NavListItem path={navListItem.path} key={navListItem.id}>
+        <Tooltip text={navListItem.name}>
+          <div className="d-none responsive-d-flex ai-center">
+            <svg width="16" height="16" fill="currentColor">
+              <use href={`#${navListItem.name}`}></use>
+            </svg>
+          </div>
+        </Tooltip>
+        <li className="">
+          <span className="responsive-d-none">{navListItem.name}</span>
+        </li>
       </NavListItem>
     );
   });
