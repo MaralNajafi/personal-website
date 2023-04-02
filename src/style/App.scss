@@ -6,6 +6,7 @@
   min-height: 100vh;
   font-family: $ff-main;
   transition: background-image 100ms;
+  background-color: #f4f4f4;
 }
 
 .inner-container {
@@ -15,10 +16,6 @@
 
 .main-header {
   padding-block: 1rem;
-}
-
-.me-wrapper{
-
 }
 
 .my-name {
