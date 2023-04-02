@@ -13,6 +13,12 @@
   display: block;
 }
 
+@media (max-width: 800px){
+  .responsive-d-flex{
+    display: flex;
+  }
+}
+
 .d-flex {
   display: flex;
 }
@@ -67,4 +73,8 @@
 
 .td-underline {
   text-decoration: underline;
+}
+
+.cursor-pointer {
+  cursor: pointer;
 }

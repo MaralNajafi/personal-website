@@ -1,7 +1,7 @@
 import React from "react";
 import InnerContainer from "../Containers/InnerContainer";
 import ContactBoxForm from "../Forms/ContactBoxForm";
-import ContactBoxInfo from "../SideBars/ContactBoxInfo";
+import ContactBoxInfo from "../SideBars/ContactBoxInfo/ContactBoxInfo";
 
 export default function ContactBox() {
   return (
