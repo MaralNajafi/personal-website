@@ -13,9 +13,12 @@
   display: block;
 }
 
-@media (max-width: 800px){
-  .responsive-d-flex{
+@media (max-width: 800px) {
+  .responsive-d-flex {
     display: flex;
+  }
+  .responsive-d-none {
+    display: none;
   }
 }
 
@@ -65,6 +68,10 @@
 
 .gap-10px {
   gap: 10px;
+}
+
+.gap-5px {
+  gap: 5px;
 }
 
 .d-grid {

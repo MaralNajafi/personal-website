@@ -8,9 +8,9 @@ export default function ContactBoxInfoBody({ isToggled }) {
         !isToggled ? "contact-box__info__body_toggle" : ""
       }`}
     >
-      <SVGListItem svgID={"envelop"}>Marawlnajafi@gmail.com</SVGListItem>
-      <SVGListItem svgID={"telephone"}>+98 917 28 33 171</SVGListItem>
-      <SVGListItem svgID={"github"}>
+      <SVGListItem gap={10} svgID={"envelop"}>Marawlnajafi@gmail.com</SVGListItem>
+      <SVGListItem gap={10} svgID={"telephone"}>+98 917 28 33 171</SVGListItem>
+      <SVGListItem gap={10} svgID={"github"}>
         <a href="https://github.com/MaralNajafi" className="td-underline">
           Maral Najafi
         </a>

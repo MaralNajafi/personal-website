@@ -1,14 +1,10 @@
 import React from "react";
 
-export default function SVGListItem({svgID, children}) {
+export default function SVGListItem({ svgID, gap, children }) {
   return (
-    <li className="d-flex ai-center gap-10px">
+    <li className={`d-flex ai-center gap-${gap}px`}>
       <div className="d-flex ai-center">
-        <svg
-          width="16"
-          height="16"
-          fill="currentColor"
-        >
+        <svg width="16" height="16" fill="currentColor">
           <use href={`#${svgID}`}></use>
         </svg>
       </div>
