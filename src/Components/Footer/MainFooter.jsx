@@ -2,7 +2,7 @@ import React from "react";
 import InnerContainer from "../Containers/InnerContainer";
 import MeBox from "../Boxes/MeBox";
 import Tooltip from "../Tooltip/Tooltip";
-import SVG from "../SVG";
+import SVG from "../SVG/SVG";
 import { Link } from "react-router-dom";
 
 export default function MainFooter() {
