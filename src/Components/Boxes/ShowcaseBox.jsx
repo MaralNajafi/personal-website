@@ -4,7 +4,7 @@ import ShowcaseInfo from "../SideBars/ShowcaseInfo";
 
 export default function Showcase() {
   return (
-    <InnerContainer className="inner-container">
+    <InnerContainer>
       <div className="showcase d-grid">
         <ShowcaseInfo
           explanation={
