@@ -92,12 +92,19 @@
 
 .contact-box {
   max-width: 800px;
-  height: 400px;
+  min-height: 400px;
   margin: 0 auto;
   margin-block-start: 4rem;
   border-radius: 5px;
   overflow: hidden;
   box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+  @media (max-width: 800px) {
+    flex-direction: column;
+    min-height: 600px;
+    margin-block-start: 2rem;
+
+
+  }
 }
 
 .contact-box__info {
