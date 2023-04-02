@@ -1,13 +1,13 @@
 import React from "react";
 
 export default function ContactBoxInfoHeader({
-  title,
+  children,
   isToggled,
   handleToggle,
 }) {
   return (
     <div className="d-flex jc-space-between">
-      <h3>{title}</h3>
+      <div>{children}</div>
       <div
         className="d-none responsive-d-flex ai-center flex-grow-1 jc-end cursor-pointer"
         onClick={handleToggle}

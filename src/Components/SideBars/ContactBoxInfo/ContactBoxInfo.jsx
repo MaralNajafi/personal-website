@@ -1,5 +1,6 @@
 import ContactBoxInfoBody from "./ContactBoxInfoBody";
 import ContactBoxInfoHeader from "./ContactBoxInfoHeader";
+import MeBox from "../../Boxes/MeBox";
 import { useState } from "react";
 
 export default function ContactBoxInfo() {
@@ -8,11 +9,9 @@ export default function ContactBoxInfo() {
 
   return (
     <div className="contact-box__info d-flex flex-col">
-      <ContactBoxInfoHeader
-        isToggled={isToggled}
-        title={"contact info"}
-        handleToggle={handleToggle}
-      />
+      <ContactBoxInfoHeader isToggled={isToggled} handleToggle={handleToggle}>
+        <h3>contact info</h3>
+      </ContactBoxInfoHeader>
       <ContactBoxInfoBody isToggled={isToggled} />
     </div>
   );
