@@ -1,5 +1,6 @@
 import NavListItem from "./NavListItem";
 import Tooltip from "../Tooltip/Tooltip";
+import SVG from "../SVG/SVG";
 
 export default function MainNav() {
   const navListItems = [
@@ -24,10 +25,8 @@ export default function MainNav() {
     return (
       <NavListItem path={navListItem.path} key={navListItem.id}>
         <Tooltip text={navListItem.name}>
-          <div className="d-none responsive-d-flex ai-center">
-            <svg width="16" height="16" fill="currentColor">
-              <use href={`#${navListItem.name}`}></use>
-            </svg>
+          <div className="d-none responsive-d-flex">
+            <SVG id={navListItem.name}/>
           </div>
         </Tooltip>
         <li className="">
