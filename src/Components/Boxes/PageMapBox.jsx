@@ -4,11 +4,11 @@ import LinkListItem from "../ListItems/LinkListItem";
 export default function PageMapBox() {
   return (
     <div>
-      <ul className="d-flex flex-col gap-5px">
-        <LinkListItem path={"contact"}>Contact Me</LinkListItem>
-        <div>
-          <LinkListItem path={"about"}>About Me</LinkListItem>
-          <ul className="nested-ul d-flex flex-col gap-5px">
+      <ul className="d-flex flex-col ai-center gap-5px">
+        <LinkListItem path={"contact"}>Contact</LinkListItem>
+        <div className="d-flex flex-col ai-center">
+          <LinkListItem path={"about"}>About</LinkListItem>
+          <ul className="nested-ul d-flex flex-col ai-center gap-5px">
             <LinkListItem path={"about#personal-info"}>
               personal info
             </LinkListItem>

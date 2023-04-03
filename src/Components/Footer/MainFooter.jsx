@@ -9,8 +9,8 @@ export default function MainFooter() {
   return (
     <footer className="main-footer">
       <InnerContainer>
-        <div className="main-footer__data d-flex jc-center ai-center">
-          <div className="d-flex flex-col gap-10px">
+        <div className="main-footer__data d-flex jc-center ai-center flex-wrap">
+          <div className="d-flex flex-col gap-10px white-space-nw">
             <MeBox name={"maral najafi"} position={"front end developer"} />
             <SocialMediaBox />
           </div>

@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 export default function CopyrightBox() {
   return (
-    <div className="copyright-box d-flex flex-col jc-center ai-center">
+    <div className="copyright-box d-flex flex-col jc-center ai-center white-space-nw">
       <p>Copyright &copy; 2023. All rights reserved.</p>
       <p>
         Designed and developed by{" "}

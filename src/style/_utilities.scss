@@ -66,6 +66,10 @@
   flex-grow: 1;
 }
 
+.flex-wrap{
+  flex-wrap: wrap;
+}
+
 .gap-20px {
   gap: 20px;
 }
@@ -88,4 +92,8 @@
 
 .cursor-pointer {
   cursor: pointer;
+}
+
+.white-space-nw{
+  white-space: nowrap;
 }
