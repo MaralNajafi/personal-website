@@ -4,22 +4,36 @@ import SVG from "../SVG/SVG";
 import { Link } from "react-router-dom";
 
 export default function SocialMediaBox() {
-  return (
-    <ul className="d-flex jc-space-between">
-      <Tooltip text={"github"}>
-        <Link to={"https://github.com/MaralNajafi"}>
-          <SVG id={"github"} />
+  const socialMediaItems = [
+    {
+      name: "GitHub",
+      link: "https://github.com/MaralNajafi",
+      icon: "github",
+    },
+    {
+      name: "LinkedIn",
+      link: "https://www.linkedin.com/",
+      icon: "linked-in",
+    },
+    {
+      name: "Telegram",
+      link: "https://t.me/MaralNajafi",
+      icon: "telegram",
+    },
+    {
+      name: "Instagram",
+      link: "https://www.instagram.com/maralnajafi_/",
+      icon: "instagram",
+    },
+  ];
+  const SOCIAL_MEDIA_ITEM = socialMediaItems.map((socialMediaItem, index) => {
+    return (
+      <Tooltip text={socialMediaItem.name} key={index}>
+        <Link to={socialMediaItem.link}>
+          <SVG id={socialMediaItem.icon} />
         </Link>
       </Tooltip>
-      <Tooltip text={"LinkedIn"}>
-        <SVG id={"linked-in"} />
-      </Tooltip>
-      <Tooltip text={"telegram"}>
-        <SVG id={"telegram"} />
-      </Tooltip>
-      <Tooltip text={"instagram"}>
-        <SVG id={"instagram"} />
-      </Tooltip>
-    </ul>
-  );
+    );
+  });
+  return <ul className="d-flex jc-space-between">{SOCIAL_MEDIA_ITEM}</ul>;
 }
