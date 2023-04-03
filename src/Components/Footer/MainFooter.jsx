@@ -1,36 +1,21 @@
 import React from "react";
 import InnerContainer from "../Containers/InnerContainer";
 import MeBox from "../Boxes/MeBox";
-import Tooltip from "../Tooltip/Tooltip";
-import SVG from "../SVG/SVG";
-import { Link } from "react-router-dom";
+import CopyrightBox from "../Boxes/CopyrightBox";
+import PageMapBox from "../Boxes/PageMapBox";
+import SocialMediaBox from "../Boxes/SocialMediaBox";
 
 export default function MainFooter() {
   return (
     <footer className="main-footer">
       <InnerContainer>
-        <div className="main-footer__data d-flex">
+        <div className="main-footer__data d-flex jc-center ai-center">
           <div className="d-flex flex-col gap-10px">
             <MeBox name={"maral najafi"} position={"front end developer"} />
-            <ul className="d-flex jc-space-between">
-              <Tooltip text={"github"}>
-                <Link to={"https://github.com/MaralNajafi"}>
-                  <SVG id={"github"} />
-                </Link>
-              </Tooltip>
-              <Tooltip text={"LinkedIn"}>
-                <SVG id={"linked-in"} />
-              </Tooltip>
-              <Tooltip text={"telegram"}>
-                <SVG id={"telegram"} />
-              </Tooltip>
-              <Tooltip text={"instagram"}>
-                <SVG id={"instagram"} />
-              </Tooltip>
-            </ul>
+            <SocialMediaBox />
           </div>
-          <div></div>
-          <div></div>
+          <PageMapBox />
+          <CopyrightBox />
         </div>
       </InnerContainer>
     </footer>
