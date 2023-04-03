@@ -29,7 +29,7 @@ export default function MainNav() {
             <SVG id={navListItem.name}/>
           </div>
         </Tooltip>
-        <li className="">
+        <li>
           <span className="responsive-d-none">{navListItem.name}</span>
         </li>
       </NavListItem>
