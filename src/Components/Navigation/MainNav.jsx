@@ -26,11 +26,11 @@ export default function MainNav() {
       <NavListItem path={navListItem.path} key={navListItem.id}>
         <Tooltip text={navListItem.name}>
           <div className="d-none responsive-d-flex">
-            <SVG id={navListItem.name}/>
+            <SVG id={navListItem.name} />
           </div>
         </Tooltip>
-        <li>
-          <span className="responsive-d-none">{navListItem.name}</span>
+        <li className="responsive-d-none">
+          <span>{navListItem.name}</span>
         </li>
       </NavListItem>
     );
