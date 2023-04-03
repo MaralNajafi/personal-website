@@ -1,4 +1,4 @@
-import NavListItem from "./NavListItem";
+import NavListItem from "../ListItems/NavListItem";
 import Tooltip from "../Tooltip/Tooltip";
 import SVG from "../SVG/SVG";
 
