@@ -8,16 +8,8 @@ import MessageBoxContext from "../../context/MessageBoxContext";
 import { toast } from "react-toastify";
 
 export default function ContactBoxForm({ title }) {
-  const [isSubmit, setIsSubmit] = useState(false);
   const [isPending, setIsPending] = useState(false);
   const [isFailed, setIsFailed] = useState(false);
-
-  const notifySuccess = (message) => {
-    toast.success(message);
-  };
-  const notifyError = (message) => {
-    toast.error(message);
-  };
 
   const formik = useFormik({
     initialValues: {
@@ -47,8 +39,7 @@ export default function ContactBoxForm({ title }) {
           body: JSON.stringify(values),
         });
         if (postAPI.ok) {
-          setIsSubmit(true);
-          notifySuccess("Your message was sent!");
+          toast.success("Your message was sent!");
           setIsPending(false);
           setIsFailed(false);
           formik.handleReset();
@@ -56,8 +47,7 @@ export default function ContactBoxForm({ title }) {
           throw new Error();
         }
       } catch (error) {
-        setIsSubmit(false);
-        notifyError("There was an error. Please, try again.");
+        toast.error("There was an error. Please, try again.");
         setIsPending(false);
         setIsFailed(true);
       }
