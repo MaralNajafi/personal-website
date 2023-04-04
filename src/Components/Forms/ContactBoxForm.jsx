@@ -5,10 +5,20 @@ import PrimaryButton from "../Buttons/PrimaryButton";
 import StackInput from "../Inputs/StackInput";
 import MessageBox from "../Boxes/MessageBox/MessageBox";
 import MessageBoxContext from "../../context/MessageBoxContext";
+import { toast } from "react-toastify";
+
 export default function ContactBoxForm({ title }) {
   const [isSubmit, setIsSubmit] = useState(false);
   const [isPending, setIsPending] = useState(false);
   const [isFailed, setIsFailed] = useState(false);
+
+  const notifySuccess = (message) => {
+    toast.success(message);
+  };
+  const notifyError = (message) => {
+    toast.error(message);
+  };
+
   const formik = useFormik({
     initialValues: {
       fullName: "",
@@ -38,113 +48,106 @@ export default function ContactBoxForm({ title }) {
         });
         if (postAPI.ok) {
           setIsSubmit(true);
-          setTimeout(() => {
-            setIsSubmit(false);
-          }, 500);
+          notifySuccess("Your message was sent!");
           setIsPending(false);
           setIsFailed(false);
           formik.handleReset();
         } else {
-          throw new Error("error");
+          throw new Error();
         }
       } catch (error) {
+        setIsSubmit(false);
+        notifyError("There was an error. Please, try again.");
         setIsPending(false);
         setIsFailed(true);
-        console.log("failed");
       }
     },
   });
   return (
-    <div className="contact-box__form d-flex flex-col">
-      <h3>{title}</h3>
-      <form
-        onSubmit={formik.handleSubmit}
-        className="d-flex flex-col flex-grow-1"
-      >
-        <StackInput
-          name="fullName"
-          type="text"
-          placeholder="Full Name"
-          value={formik.values.fullName}
-          onBlur={formik.handleBlur}
-          onChange={formik.handleChange}
-          errorMessage={
-            formik.touched.fullName && formik.errors.fullName ? (
-              formik.errors.fullName
-            ) : (
-              <br />
-            )
-          }
-        />
-        <StackInput
-          name="email"
-          type="text"
-          className="stack-input"
-          placeholder="email"
-          value={formik.values.email}
-          onBlur={formik.handleBlur}
-          onChange={formik.handleChange}
-          errorMessage={
-            formik.touched.email && formik.errors.email ? (
-              formik.errors.email
-            ) : (
-              <br />
-            )
-          }
-        />
-
-        <MessageBoxContext.Provider
-          value={{
-            subject: {
-              name: "subject",
-              type: "text",
-              className: `"flex-grow-1" ${
-                formik.touched.subject && formik.errors.subject
-                  ? "error-style"
-                  : ""
-              }`,
-              placeholder:
-                formik.touched.subject && formik.errors.subject
-                  ? "subject*"
-                  : "subject",
-              value: formik.values.subject,
-              onBlur: formik.handleBlur,
-              onChange: formik.handleChange,
-            },
-            message: {
-              name: "message",
-              type: "text",
-              className:
-                formik.touched.message && formik.errors.message
-                  ? "error-style"
-                  : "",
-
-              placeholder:
-                formik.touched.message && formik.errors.message
-                  ? "message*"
-                  : "message",
-              value: formik.values.message,
-              onBlur: formik.handleBlur,
-              onChange: formik.handleChange,
-            },
-          }}
+    <>
+      <div className="contact-box__form d-flex flex-col">
+        <h3>{title}</h3>
+        <form
+          onSubmit={formik.handleSubmit}
+          className="d-flex flex-col flex-grow-1"
         >
-          <MessageBox />
-        </MessageBoxContext.Provider>
-        <PrimaryButton
-          type={"submit"}
-          disabled={isSubmit || isPending ? true : false}
-          id={"submitBtn"}
-        >
-          {isPending
-            ? "sending"
-            : isFailed
-            ? "try again"
-            : isSubmit
-            ? "sent"
-            : "send"}
-        </PrimaryButton>
-      </form>
-    </div>
+          <StackInput
+            name="fullName"
+            type="text"
+            placeholder="Full Name"
+            value={formik.values.fullName}
+            onBlur={formik.handleBlur}
+            onChange={formik.handleChange}
+            errorMessage={
+              formik.touched.fullName && formik.errors.fullName ? (
+                formik.errors.fullName
+              ) : (
+                <br />
+              )
+            }
+          />
+          <StackInput
+            name="email"
+            type="text"
+            className="stack-input"
+            placeholder="email"
+            value={formik.values.email}
+            onBlur={formik.handleBlur}
+            onChange={formik.handleChange}
+            errorMessage={
+              formik.touched.email && formik.errors.email ? (
+                formik.errors.email
+              ) : (
+                <br />
+              )
+            }
+          />
+          <MessageBoxContext.Provider
+            value={{
+              subject: {
+                name: "subject",
+                type: "text",
+                className: `"flex-grow-1" ${
+                  formik.touched.subject && formik.errors.subject
+                    ? "error-style"
+                    : ""
+                }`,
+                placeholder:
+                  formik.touched.subject && formik.errors.subject
+                    ? "subject*"
+                    : "subject",
+                value: formik.values.subject,
+                onBlur: formik.handleBlur,
+                onChange: formik.handleChange,
+              },
+              message: {
+                name: "message",
+                type: "text",
+                className:
+                  formik.touched.message && formik.errors.message
+                    ? "error-style"
+                    : "",
+                placeholder:
+                  formik.touched.message && formik.errors.message
+                    ? "message*"
+                    : "message",
+                value: formik.values.message,
+                onBlur: formik.handleBlur,
+                onChange: formik.handleChange,
+              },
+            }}
+          >
+            <MessageBox />
+          </MessageBoxContext.Provider>
+          <PrimaryButton
+            type={"submit"}
+            disabled={isPending ? true : false}
+            id={"submitBtn"}
+          >
+            {isPending ? "sending" : isFailed ? "try again" : "send"}
+          </PrimaryButton>
+        </form>
+      </div>
+    </>
   );
 }
