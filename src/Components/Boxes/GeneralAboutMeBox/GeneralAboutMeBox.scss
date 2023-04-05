@@ -1,0 +1,40 @@
+@import "../../../style/config";
+
+.general-about-me-box {
+  font-family: $ff-sub-main;
+  min-height: 16rem;
+  margin-block-end: 2rem;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+}
+
+.general-about-me-box__image {
+  background-color: #f4f4f4f4;
+  width: 230px;
+}
+
+.general-about-me-box__info {
+  background-color: #ffffff;
+  padding: 1rem;
+}
+
+.general-about-me-box__info > div{
+  height: 100%;
+  padding: 10px;
+  background-color: #f4f4f4;
+  border-radius: 5px;
+}
+
+.general-about-me-box__info a{
+  color: #7d7d7d;
+}
+
+.general-about-me-box__info a:hover{
+  color: $color-primary;
+}
+
+.general-about-me-box__info h3{
+  font-size: 22px;
+  font-weight: 400;
+  margin-bottom: 0.2em;
+  color: #2b2b2b;
+}
