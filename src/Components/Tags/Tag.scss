@@ -1,0 +1,16 @@
+@import "../../style/config";
+
+.tag {
+  display: inline-flex;
+  background-color: $color-primary-extra-light;
+  color: $color-primary-dark;
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 1.5rem;
+  line-height: 18px;
+  white-space: nowrap;
+  border: 1px solid transparent;
+  border-radius: 2em;
+  padding: 1px 10px;
+  line-height: 22px;
+}
