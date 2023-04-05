@@ -1,5 +1,5 @@
 import ContactBoxInfoBody from "./ContactBoxInfoBody";
-import ContactBoxInfoHeader from "../../Header/ContactBoxInfoHeader";
+import ContactBoxInfoHeader from "./ContactBoxInfoHeader";
 import { useState } from "react";
 
 export default function ContactBoxInfo() {

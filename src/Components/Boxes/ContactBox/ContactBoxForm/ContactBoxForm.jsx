@@ -1,10 +1,10 @@
 import { useFormik } from "formik";
 import React, { useState } from "react";
 import * as Yup from "yup";
-import PrimaryButton from "../Buttons/PrimaryButton";
-import StackInput from "../Inputs/StackInput";
-import MessageBox from "../Boxes/MessageBox/MessageBox";
-import MessageBoxContext from "../../context/MessageBoxContext";
+import PrimaryButton from "../../../Buttons/PrimaryButton";
+import StackInput from "../../../Inputs/StackInput";
+import MessageBox from "../../MessageBox/MessageBox";
+import MessageBoxContext from "../../../../context/MessageBoxContext";
 import { toast } from "react-toastify";
 
 export default function ContactBoxForm({ title }) {

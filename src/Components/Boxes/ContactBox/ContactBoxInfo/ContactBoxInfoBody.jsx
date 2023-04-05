@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import SVGListItem from "../../ListItems/SVGListItem";
+import SVGListItem from "../../../ListItems/SVGListItem";
 
 export default function ContactBoxInfoBody({ isToggled }) {
   return (
