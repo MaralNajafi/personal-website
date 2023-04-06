@@ -1,4 +1,5 @@
 import "./style/App.scss";
+import "./style/ScrollBar.scss";
 import Layout from "./pages/Layout";
 import Home from "./pages/Home";
 import About from "./pages/About";
