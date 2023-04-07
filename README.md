@@ -14,6 +14,14 @@ Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 The page will reload when you make changes.\
 You may also see any lint errors in the console.
 
+### `npm run server`
+
+Runs json-server.\
+Open [http://localhost:3004](http://localhost:3004) to view db.json in your browser.
+
+Reload the page to see changes in db.json.\
+You can change the port in package.json/scripts/server
+
 ### `npm test`
 
 Launches the test runner in the interactive watch mode.\
