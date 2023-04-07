@@ -3,7 +3,7 @@ import KeyValueTypeBox from "../KeyValueTypeBox/KeyValueTypeBox";
 import "./GeneralAboutMeBox.scss";
 import Tag from "../../Tags/Tag";
 import { Link } from "react-router-dom";
-import MY_AGE from "../../../Functions/getMyAge";
+import MY_AGE from "../../../utils/getMyAge";
 
 export default function GeneralAboutMeBox() {
   return (
