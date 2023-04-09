@@ -12,7 +12,7 @@ export default function SocialMediaBox() {
     },
     {
       name: "LinkedIn",
-      link: "https://www.linkedin.com/",
+      link: "https://www.linkedin.com/in/maral-najafi-4a2ba5270/",
       icon: "linked-in",
     },
     {
