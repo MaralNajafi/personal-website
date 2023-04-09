@@ -1,8 +1,8 @@
 import { useFormik } from "formik";
 import React, { useState } from "react";
 import * as Yup from "yup";
-import PrimaryButton from "../../Buttons/PrimaryButton";
-import StackInput from "../../Inputs/StackInput";
+import PrimaryButton from "../../Buttons/PrimaryButton/PrimaryButton";
+import StackInput from "../../Inputs/StackInput/StackInput";
 import MessageBox from "../../Boxes/MessageBox/MessageBox";
 import MessageBoxContext from "../../../context/MessageBoxContext";
 import { toast } from "react-toastify";

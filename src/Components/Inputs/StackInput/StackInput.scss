@@ -1,0 +1,21 @@
+@import "../../../style/config";
+
+.stack-input {
+  background: none;
+  border: none;
+  border-bottom: 1px solid #000;
+  outline: none;
+  height: 30px;
+  padding: 10px;
+}
+
+.stack-input::placeholder {
+  font-family: $ff-main;
+  text-transform: capitalize;
+  font-weight: 400;
+}
+
+.stack-input:hover,
+.stack-input:focus {
+  border-bottom-color: $color-primary-dark;
+}

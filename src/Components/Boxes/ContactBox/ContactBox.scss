@@ -1,0 +1,65 @@
+@import "../../../style/config";
+
+.contact-box {
+  max-width: 800px;
+  min-height: 400px;
+  margin: 0 auto;
+  margin-block-start: 4rem;
+  border-radius: 5px;
+  overflow: hidden;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+  @media (max-width: 800px) {
+    flex-direction: column;
+    min-height: 600px;
+    margin-block-start: 2rem;
+  }
+}
+
+.contact-box__info {
+  background-color: $color-primary;
+  padding: 1rem 2rem;
+  color: #ffffff;
+}
+
+.contact-box__info h3 {
+  font-size: 22px;
+  font-weight: 500;
+  text-transform: capitalize;
+}
+
+.contact-box__info__body {
+  margin-top: 1rem;
+  gap: 10px;
+  font-weight: 300;
+  height: auto;
+  opacity: 1;
+  transition: all 250ms;
+}
+
+@media (max-width: 800px) {
+  .contact-box__info__body_toggle {
+    height: 0;
+    opacity: 0;
+    margin-top: 0;
+  }
+}
+
+.contact-box__form {
+  background-color: #ffffff;
+  padding: 1rem 2rem;
+  flex-grow: 1;
+}
+
+.contact-box__form h3 {
+  font-weight: 400;
+  font-size: 22px;
+}
+
+.contact-box__form form {
+  margin-top: 1rem;
+  gap: 10px;
+}
+
+.contact-box__form button {
+  align-self: flex-end;
+}

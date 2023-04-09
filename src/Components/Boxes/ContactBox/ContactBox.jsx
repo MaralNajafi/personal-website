@@ -1,4 +1,5 @@
 import React from "react";
+import "./ContactBox.scss";
 import InnerContainer from "../../Containers/InnerContainer";
 import ContactBoxForm from "../../Forms/ContactBoxForm/ContactBoxForm";
 import ContactBoxInfo from "../../ContactBoxInfo/ContactBoxInfo";
