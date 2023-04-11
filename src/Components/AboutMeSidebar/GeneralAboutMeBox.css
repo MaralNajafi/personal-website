@@ -1,11 +1,9 @@
-@import "../../../style/config";
-
 .general-about-me-box {
   height: auto;
   align-self: flex-start;
   position: sticky;
   top: 0;
-  font-family: $ff-sub-main;
+  font-family: var(--ff-sub-main);
   margin-block-end: 2rem;
   box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
 }
@@ -21,7 +19,6 @@
   height: 100%;
   padding: 10px;
   padding: 1rem;
-  // border-bottom: 1px solid #d3d3d3 ;
 }
 
 .general-about-me-box__info a {
@@ -29,7 +26,7 @@
 }
 
 .general-about-me-box__info a:hover {
-  color: $color-primary;
+  color: var(--color-primary);
 }
 
 .general-about-me-box__info h3 {

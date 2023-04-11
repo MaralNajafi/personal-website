@@ -1,5 +1,5 @@
 import React from "react";
-import "./KeyValueTypeBox.scss";
+import "./KeyValueTypeBox.css";
 
 export default function KeyValueTypeBox({ keyName, valueContent }) {
   return (

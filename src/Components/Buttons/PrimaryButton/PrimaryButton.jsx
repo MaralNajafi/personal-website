@@ -1,5 +1,5 @@
 import React from "react";
-import "./PrimaryButton.scss";
+import "./PrimaryButton.css";
 
 export default function PrimaryButton({
   id,

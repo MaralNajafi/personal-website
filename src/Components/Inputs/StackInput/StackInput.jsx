@@ -1,5 +1,5 @@
 import React from "react";
-import "./StackInput.scss";
+import "./StackInput.css";
 
 export default function StackInput({
   name,

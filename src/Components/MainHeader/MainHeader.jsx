@@ -1,6 +1,6 @@
 import React from "react";
 import MeBox from "../Boxes/MeBox";
-import MainNav from "../Navigation/MainNav";
+import MainNav from "../MainNav/MainNav";
 
 export default function MainHeader() {
   return (

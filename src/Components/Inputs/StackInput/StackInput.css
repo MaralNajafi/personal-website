@@ -1,5 +1,3 @@
-@import "../../../style/config";
-
 .stack-input {
   background: none;
   border: none;
@@ -10,12 +8,12 @@
 }
 
 .stack-input::placeholder {
-  font-family: $ff-main;
+  font-family: var(--ff-main);
   text-transform: capitalize;
   font-weight: 400;
 }
 
 .stack-input:hover,
 .stack-input:focus {
-  border-bottom-color: $color-primary-dark;
+  border-bottom-color: var(--color-primary-dark);
 }
