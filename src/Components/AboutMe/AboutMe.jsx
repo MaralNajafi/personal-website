@@ -76,7 +76,7 @@ export default function AboutMe() {
         </b>{" "}
         In this course I learned how to work with different libraries and APIs.
       </p>
-      <h2>Why I enjoy developing web projects</h2>
+      <h2>Why I enjoy developing web projects:</h2>
       <p>
         I’ve been always known as an empath and a person with interpersonal
         skills enough to be able to see a situation from other people’s point of
