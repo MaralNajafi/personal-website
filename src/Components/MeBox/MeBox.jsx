@@ -1,4 +1,5 @@
 import React from "react";
+import "./MeBox.css";
 
 export default function Me({ name, position }) {
   return (

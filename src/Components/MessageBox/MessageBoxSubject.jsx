@@ -1,6 +1,6 @@
 import React, { useContext } from "react";
-import NonStackInput from "../../Inputs/NonStackInput";
-import MessageBoxContext from "../../../context/MessageBoxContext";
+import NonStackInput from "../Inputs/NonStackInput";
+import MessageBoxContext from "../../context/MessageBoxContext";
 
 export default function MessageBoxSubject() {
   const messageBoxData = useContext(MessageBoxContext);

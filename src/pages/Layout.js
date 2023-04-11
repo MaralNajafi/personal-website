@@ -1,8 +1,8 @@
 import { Outlet } from "react-router-dom";
-import Container from "../Components/Containers/Container";
+import Container from "../Components/Container/Container";
 import MainHeader from "../Components/MainHeader/MainHeader";
 import MainFooter from "../Components/MainFooter/MainFooter";
-import SVGContainer from "../Components/Containers/SVGContainer";
+import SVGContainer from "../Components/SVGcontainer/SVGContainer";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 

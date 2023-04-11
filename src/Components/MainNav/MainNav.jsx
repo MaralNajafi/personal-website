@@ -1,6 +1,7 @@
 import NavListItem from "../ListItems/NavListItem";
 import Tooltip from "../Tooltip/Tooltip";
 import SVG from "../SVG/SVG";
+import "./MainNav.css";
 
 export default function MainNav() {
   const navListItems = [

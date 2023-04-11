@@ -1,6 +1,7 @@
 import React from "react";
 import MessageBoxSubject from "./MessageBoxSubject";
 import MessageBoxMessage from "./MessageBoxMessage";
+import "./MessageBox.css";
 
 export default function MessageBox() {
   return (

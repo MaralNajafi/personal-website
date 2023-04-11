@@ -1,0 +1,16 @@
+.main-nav ul {
+  gap: 1rem;
+  font-size: 14px;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.main-nav .active {
+  color: var(--color-primary);
+}
+
+
+.main-nav li:hover {
+  color: var(--color-primary-dark);
+  cursor: pointer;
+}

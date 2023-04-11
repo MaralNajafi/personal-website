@@ -1,5 +1,5 @@
 import React, { useContext } from "react";
-import MessageBoxContext from "../../../context/MessageBoxContext";
+import MessageBoxContext from "../../context/MessageBoxContext";
 
 export default function MessageBoxInfo() {
     const messageBoxData = useContext(MessageBoxContext)
