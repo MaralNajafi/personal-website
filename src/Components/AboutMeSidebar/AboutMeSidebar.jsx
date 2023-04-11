@@ -1,13 +1,13 @@
 import React from "react";
 import KeyValueTypeBox from "../KeyValueTypeBox/KeyValueTypeBox";
-import "./GeneralAboutMeBox.css";
+import "./AboutMeSidebar.css";
 import Tag from "../Tags/Tag";
 import { Link } from "react-router-dom";
 import MY_AGE from "../../utils/getMyAge";
 
 export default function GeneralAboutMeBox() {
   return (
-      <div className="general-about-me-box__info d-flex flex-col">
+      <div className="about-me-sidebar d-flex flex-col">
         <div className="d-flex flex-col gap-5px">
           <h3>General info</h3>
           <KeyValueTypeBox keyName={"age"} valueContent={MY_AGE} />

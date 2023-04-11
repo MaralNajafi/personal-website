@@ -1,4 +1,4 @@
-.general-about-me-box__info {
+.about-me-sidebar {
   position: sticky;
   top: 0;
   height: 550px;
@@ -12,25 +12,25 @@
 }
 
 @media (max-width: 900px) {
-  .general-about-me-box__info{
+  .about-me-sidebar{
       position: static;
   }
 }
 
-.general-about-me-box__info > div {
+.about-me-sidebar > div {
   padding: 10px;
   padding: 1rem;
 }
 
-.general-about-me-box__info a {
+.about-me-sidebar a {
   color: #424242;
 }
 
-.general-about-me-box__info a:hover {
+.about-me-sidebar a:hover {
   color: var(--color-primary);
 }
 
-.general-about-me-box__info h3 {
+.about-me-sidebar h3 {
   font-size: 22px;
   font-weight: 400;
   margin-bottom: 1rem;
