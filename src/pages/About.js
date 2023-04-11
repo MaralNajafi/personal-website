@@ -5,7 +5,7 @@ export default function About() {
   return (
     <div className="about-wrapper d-flex flex-row">
       <GeneralAboutMeBox />
-      <div className="about-me flex-grow-1">
+      <div className="about-me">
         <h2>Why I enjoy developing web projects</h2>
         <p>
           I’ve been always known as an empath and a person with interpersonal
