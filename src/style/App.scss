@@ -17,6 +17,26 @@
 main {
   margin-block-start: 2rem;
   grid-template-columns: 1fr 3fr;
+  gap: 3rem
+}
+
+.about-me h2{
+  font-weight: 500;
+  font-size: 26px;
+  margin-bottom: 1.5rem;
+}
+
+.about-me p {
+  line-height: 1.75rem;
+  margin-bottom: 1rem;
+}
+
+.about-me b{
+  font-weight: 600;
+}
+
+.about-me mark{
+  background-color: $color-primary-extra-light;
 }
 
 .main-header {

@@ -1,47 +1,42 @@
 @import "../../../style/config";
 
 .general-about-me-box {
+  height: auto;
+  align-self: flex-start;
   position: sticky;
-  left: 0;
   top: 0;
-  width: auto;
   font-family: $ff-sub-main;
   margin-block-end: 2rem;
   box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
 }
 
-.general-about-me-box__image {
-  background-color: #f4f4f4f4;
-  height: 240px;
-}
-
 .general-about-me-box__info {
   background-color: #ffffff;
   padding: 1rem;
-  height: 350px;
+  height: 610px;
   overflow-y: auto;
 }
 
-.general-about-me-box__info > div{
+.general-about-me-box__info > div {
   height: 100%;
   padding: 10px;
   padding: 1rem;
   // border-bottom: 1px solid #d3d3d3 ;
 }
 
-.general-about-me-box__info a{
+.general-about-me-box__info a {
   color: #424242;
 }
 
-.general-about-me-box__info a:hover{
+.general-about-me-box__info a:hover {
   color: $color-primary;
 }
 
-.general-about-me-box__info h3{
+.general-about-me-box__info h3 {
   font-size: 22px;
   font-weight: 400;
   margin-bottom: 1rem;
   padding-block: 5px;
   color: #2b2b2b;
-  border-bottom: 1px solid #d3d3d3 ;
+  border-bottom: 1px solid #d3d3d3;
 }
