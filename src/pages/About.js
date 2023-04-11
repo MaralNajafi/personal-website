@@ -3,9 +3,9 @@ import GeneralAboutMeBox from "../Components/AboutMeSidebar/AboutMeSidebar";
 
 export default function About() {
   return (
-    <main className="d-grid">
+    <div className="about-wrapper d-flex flex-row">
       <GeneralAboutMeBox />
-      <div className="about-me">
+      <div className="about-me flex-grow-1">
         <h2>Why I enjoy developing web projects</h2>
         <p>
           I’ve been always known as an empath and a person with interpersonal
@@ -52,6 +52,6 @@ export default function About() {
           </i>
         </p>
       </div>
-    </main>
+    </div>
   );
 }

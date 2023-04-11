@@ -7,9 +7,8 @@ import MY_AGE from "../../utils/getMyAge";
 
 export default function GeneralAboutMeBox() {
   return (
-    <div className="general-about-me-box d-flex flex-col">
-      <div className="general-about-me-box__info d-flex flex-col flex-grow-1">
-        <div className="d-flex flex-col gap-5px white-space-nw">
+      <div className="general-about-me-box__info d-flex flex-col">
+        <div className="d-flex flex-col gap-5px">
           <h3>General info</h3>
           <KeyValueTypeBox keyName={"age"} valueContent={MY_AGE} />
           <KeyValueTypeBox keyName={"born"} valueContent={"1999 July 1"} />
@@ -82,6 +81,5 @@ export default function GeneralAboutMeBox() {
           </div>
         </div>
       </div>
-    </div>
   );
 }

@@ -1,22 +1,23 @@
-.general-about-me-box {
-  height: auto;
-  align-self: flex-start;
+.general-about-me-box__info {
   position: sticky;
   top: 0;
-  font-family: var(--ff-sub-main);
-  margin-block-end: 2rem;
-  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
-}
-
-.general-about-me-box__info {
+  height: 550px;
+  align-self: start;
+  width: 100%;
   background-color: #ffffff;
   padding: 1rem;
-  height: 610px;
+  font-family: var(--ff-sub-main);
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
   overflow-y: auto;
 }
 
+@media (max-width: 900px) {
+  .general-about-me-box__info{
+      position: static;
+  }
+}
+
 .general-about-me-box__info > div {
-  height: 100%;
   padding: 10px;
   padding: 1rem;
 }
