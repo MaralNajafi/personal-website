@@ -15,6 +15,7 @@
 }
 
 .container {
+  padding-inline: 4rem;
   min-height: 100vh;
   font-family: var(--ff-main);
   background-color: var(--bg-color);

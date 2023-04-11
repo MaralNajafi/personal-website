@@ -1,7 +1,7 @@
 import React from "react";
 import "./ContactBox.css";
 import ContactBoxForm from "../Forms/ContactBoxForm/ContactBoxForm";
-import ContactBoxInfo from "../ContactBoxInfo/ContactBoxInfo";
+import ContactBoxInfo from "./ContactBoxInfo/ContactBoxInfo";
 
 export default function ContactBox() {
   return (
