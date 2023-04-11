@@ -5,14 +5,9 @@
 .container {
   min-height: 100vh;
   font-family: $ff-main;
-  transition: background-image 100ms;
   background-color: $bg-color;
 }
 
-.inner-container {
-  width: 80%;
-  margin: 0 auto;
-}
 
 main {
   margin-block-start: 2rem;

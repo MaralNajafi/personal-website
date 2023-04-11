@@ -1,10 +1,8 @@
 import React from "react";
 import GeneralAboutMeBox from "../Components/Boxes/GeneralAboutMeBox/GeneralAboutMeBox";
-import InnerContainer from "../Components/Containers/InnerContainer";
 
 export default function About() {
   return (
-    <InnerContainer>
       <main className="d-grid">
         <GeneralAboutMeBox />
         <div className="about-me">
@@ -55,6 +53,5 @@ export default function About() {
           </p>
         </div>
       </main>
-    </InnerContainer>
   );
 }

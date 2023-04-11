@@ -1,10 +1,8 @@
 import React from "react";
-import InnerContainer from "../Containers/InnerContainer";
 import ShowcaseInfo from "../SideBars/ShowcaseInfo";
 
 export default function Showcase() {
   return (
-    <InnerContainer>
       <div className="showcase d-grid">
         <ShowcaseInfo
           explanation={
@@ -12,6 +10,5 @@ export default function Showcase() {
           }
         />
       </div>
-    </InnerContainer>
   );
 }
