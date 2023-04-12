@@ -4,13 +4,13 @@ import "./AboutMeSidebar.css";
 import Tag from "../Tags/Tag";
 import { Link } from "react-router-dom";
 import MY_AGE from "../../utils/getMyAge";
-import ProgressiveBar from '../ProgressiveBar/ProgressiveBar'
+import ProgressiveBar from "../ProgressiveBar/ProgressiveBar";
 
 export default function GeneralAboutMeBox() {
   return (
     <div className="about-me-sidebar d-flex flex-col">
       <div className="d-flex flex-col gap-5px">
-        <h3>General info</h3>
+        <h3 id="personal-info">Personal info</h3>
         <KeyValueTypeBox keyName={"age"} valueContent={MY_AGE} />
         <KeyValueTypeBox keyName={"born"} valueContent={"1999 July 1"} />
         <KeyValueTypeBox keyName={"location"} valueContent={"Tehran/Iran"} />
@@ -25,7 +25,7 @@ export default function GeneralAboutMeBox() {
       </div>
 
       <div>
-        <h3>Projects</h3>
+        <h3 id="projects">Projects</h3>
         <div className="d-flex flex-col gap-10px white-space-nw">
           <Link
             target="_blank"
@@ -65,7 +65,7 @@ export default function GeneralAboutMeBox() {
         </div>
       </div>
       <div className="d-flex flex-col gap-5px">
-        <h3>Programming skills</h3>
+        <h3 id="programming-skills">Programming skills</h3>
         <div className="d-flex flex-row flex-wrap gap-10px">
           <Tag>JavaScript</Tag>
           <Tag>React.js</Tag>
@@ -79,7 +79,7 @@ export default function GeneralAboutMeBox() {
       </div>
 
       <div>
-        <h3>Languages</h3>
+        <h3 id="languages">Languages</h3>
         <div className="d-flex flex-col gap-10px white-space-nw">
           <ProgressiveBar title={"persian"} percentage={100} />
           <ProgressiveBar title={"English"} percentage={95} />
