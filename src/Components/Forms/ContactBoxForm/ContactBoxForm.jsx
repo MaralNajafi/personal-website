@@ -56,6 +56,9 @@ export default function ContactBoxForm({ title }) {
   return (
     <>
       <div className="contact-box__form d-flex flex-col">
+        <div className="contact-box__form_cover">
+          <p>I'm still working on this feature. Please, check contact info.</p>
+        </div>
         <h3>{title}</h3>
         <form
           onSubmit={formik.handleSubmit}

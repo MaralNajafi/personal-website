@@ -45,9 +45,30 @@
 }
 
 .contact-box__form {
+  position: relative;
   background-color: #ffffff;
   padding: 1rem 2rem;
   flex-grow: 1;
+}
+
+.contact-box__form_cover {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: grid;
+  place-items: center;
+  padding: 2rem;
+  background: rgba(255, 255, 255, 0.25);
+  backdrop-filter: blur(3px);
+  -webkit-backdrop-filter: blur(3px);
+}
+
+.contact-box__form_cover p {
+  background-color: #e2cbffd0;
+  padding: 2rem;
+  border-radius: 5px;
 }
 
 .contact-box__form h3 {
