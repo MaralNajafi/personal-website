@@ -13,11 +13,10 @@ export default function AboutMe() {
       </p>
       <h2>My journey:</h2>
       <p>
-        I started learning Front-end web development when I was{" "}
-        <b>a senior business management student.</b> I am truly thankful that I
-        was introduced to this field and could finally{" "}
-        <b>find my true passion and desire.</b> Back then, I had to study both
-        fields, one without any mentors or teachers, and teach{" "}
+        I was a <b>senior business management student</b> when I was first
+        introduced to Front-end web development. I am truly thankful that I
+        could finally <b>find my true passion and desire.</b> Back then, I had
+        to study both fields, one without any mentors or teachers, and teach{" "}
         <b>as I was an English teacher</b>, too!
       </p>
       <p>
@@ -74,7 +73,11 @@ export default function AboutMe() {
           taught me how to integrate all my skills in order to build real
           projects.
         </b>{" "}
-        In this course I learned how to work with different libraries and APIs.
+      </p>
+      <p>
+        Working with different libraries and APIs beside constantly being
+        introduced to useful resources and technologies are what I found really
+        helpful during this bootcamp.
       </p>
       <h2>Why I enjoy developing web projects:</h2>
       <p>
@@ -87,12 +90,12 @@ export default function AboutMe() {
         </b>
       </p>
       <p>
-        Also, as a business management graduate I’ve learned the importance of
+        Also, as a business management graduate, I’ve learned the importance of
         prioritizing costumers’ satisfaction and convenience. And{" "}
         <b>web users are no exception</b>.
       </p>
       <p>
-        Having my personal traits and professional background in mind, I’m
+        Considering my personal traits and professional background, I’m
         constantly thinking and searching to come up with new ideas on how to
         build a more user friendly webapp and website.{" "}
         <b>
@@ -108,13 +111,13 @@ export default function AboutMe() {
         </mark>
       </p>
       <p>
-        The fact that you start your project with least features but ending up
-        adding your next 10th feature to{" "}
+        Besides, The fact that you start your project with a few features but
+        ending up adding your next 10th feature to it{" "}
         <b>
-          it really excites me and makes me deeply understand the idea of
+          really excites me and makes me literally understand the idea of
           developing.
         </b>{" "}
-        What makes it even more interesting is that this process has no end and
+        What makes it even more interesting is that this process is endless and
         your project grows and improves like a living creature.{" "}
         <i>
           (Actually, in case you want your project to survive this fast-changing
