@@ -1,0 +1,10 @@
+.progress-wrapper span{
+    font-size: 14px;
+    font-weight: 400;
+    text-transform: capitalize;
+}
+
+progress{
+    accent-color: var(--color-primary-light);
+    width: 100%;
+}
