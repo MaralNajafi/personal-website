@@ -27,6 +27,13 @@ export default function GeneralAboutMeBox() {
       <div>
         <h3 id="projects">Projects</h3>
         <div className="d-flex flex-col gap-10px white-space-nw">
+        <Link
+          target="_blank"
+          to={"https://github.com/MaralNajafi/editable-todo-app"}
+          className="td-underline"
+        >
+          editable-todo-app
+        </Link>
           <Link
             target="_blank"
             to={"https://github.com/MaralNajafi/crypto-currency-website"}
