@@ -1,0 +1,16 @@
+.showcase {
+  margin-block-start: 2rem;
+  height: 450px;
+}
+
+.showcase-description {
+  align-self: center;
+}
+
+.showcase-description p {
+  font-family: var(--ff-sub-main);
+  max-width: 55ch;
+  word-spacing: 2px;
+  letter-spacing: 0.25px;
+  line-height: 1.6rem;
+}
