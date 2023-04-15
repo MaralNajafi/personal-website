@@ -6,6 +6,7 @@
   font-size: 0.9rem;
   border-radius: 3px;
   transition: all 300ms;
+  border: transparent solid 1px;
 }
 
 .btn-primary:hover {
