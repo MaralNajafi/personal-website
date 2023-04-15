@@ -51,7 +51,7 @@ export default function AboutMe() {
       </p>
       <h2>Courses:</h2>
       <p>
-        I took <mark>Harvard sc50 online course</mark> in order to get a deep
+        I took <mark>Harvard CS50 online course</mark> in order to get a deep
         understanding of what is happening under the hood of programming. And
         lately, I decided to take part in a <mark>Front-end bootcamp</mark>,
         which was a great decision, as I was almost getting frustrated after one
