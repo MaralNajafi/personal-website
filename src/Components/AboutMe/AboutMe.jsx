@@ -14,15 +14,15 @@ export default function AboutMe() {
       <h2>My journey:</h2>
       <p>
         I was a <b>senior business management student</b> when I was first
-        introduced to Front-end web development. I am truly thankful that I
-        could finally <b>find my true passion and desire.</b> Back then, I had
-        to study both fields, one without any mentors or teachers, and teach{" "}
+        introduced to Front-end web development. And printing my first "Hello,
+        World!", <b>I found my true passion and desire.</b> Back then, I had to
+        study both fields, one without any mentors or teachers, and teach{" "}
         <b>as I was an English teacher</b>, too!
       </p>
       <p>
         <b>I resigned as an English teacher</b> after more than 2 years of
         teaching to peruse my ultimate dream job. After successfully{" "}
-        <b>graduating from university in 2021</b> I dedicated all my time to
+        <b>graduating from university in 2021</b>, I dedicated all my time to
         become a skillful front-end web developer.
       </p>
       <p>
@@ -34,19 +34,18 @@ export default function AboutMe() {
         I must note that I wasn’t completely alone during this journey. I mean,
         google, YouTube, stack overflow, JavaScript.info and so many other
         websites and documentations were right by my side helping me fulfill my
-        dream and not giving up when facing challenging situations.
-      </p>
-      <p>
+        dream and not giving up when facing challenging situations.{" "}
         <mark>
           Self-learning highly boosted my self-confidence as I found myself
           capable of taking risks and growing as an independent individual.
         </mark>
       </p>
+
       <p>
         <b>Being a fast-learner,</b> helps me satisfy my urge to learn and
         discover more about web development and programming. And my curios mind
         has never disappointed me in coming up with new questions and topics to
-        learn about. Most of it’s questions starts with “What if …?” and “How is
+        learn about. Most of it’s questions start with “What if …?” and “How is
         it possible to …?” and{" "}
         <b>thanks to all these questions I always have new challenges.</b>
       </p>
@@ -57,9 +56,9 @@ export default function AboutMe() {
         lately, I decided to take part in a <mark>Front-end bootcamp</mark>,
         which was a great decision, as I was almost getting frustrated after one
         year of not having a mentor guiding me and lighting up the way. Joining
-        this bootcamp I found a great community of developers from any levels of
-        proficiency who are all willing to help and grow. I learned a lot from
-        my mentor{" "}
+        this bootcamp, I found a great community of developers from any levels
+        of proficiency who are all willing to help and grow. I learned a lot
+        from my mentor{" "}
         <Link
           to={"https://ehsangazar.com/?gi=79d5ae14e725"}
           className="td-underline"
