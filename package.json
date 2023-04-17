@@ -2,11 +2,13 @@
   "name": "personal-website",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://maralnajafi.github.io/personal-website",
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
     "formik": "^2.2.9",
+    "gh-pages": "^5.0.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-loader-spinner": "^5.3.4",
@@ -23,6 +25,7 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "server": "json-server --watch db.json --port 3004",
+    "deploy": "gh-pages -b main -d build",
     "eject": "react-scripts eject"
   },
   "eslintConfig": {
