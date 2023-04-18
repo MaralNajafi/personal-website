@@ -11,9 +11,9 @@ function App() {
     <>
       <Routes>
         <Route element={<Layout />}>
-          <Route index path="/" Component={Home} />
-          <Route path="about" Component={About} />
-          <Route path="contact" Component={Contact} />
+          <Route index path="/personal-website/" Component={Home} exact />
+          <Route path="/personal-website/about" Component={About} />
+          <Route path="/personal-website/contact" Component={Contact} />
         </Route>
       </Routes>
     </>

@@ -1,5 +1,5 @@
 import React from "react";
-import ContactBox from "../Components/ContactBox/ContactBox";
+import ContactBox from "../components/ContactBox/ContactBox";
 
 export default function Contact() {
   return (

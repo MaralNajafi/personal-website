@@ -1,8 +1,10 @@
 import React from "react";
-import { NavLink } from "react-router-dom";
+import { Link } from "react-router-dom";
 
-export default function NavListItem({ children, path }) {
+export default function NavListItem({ children, path, active }) {
   return (
-      <NavLink to={path}>{children}</NavLink>
+    <Link to={path} className={`nav-link ${active ? "active" : ""}`}>
+      {children}
+    </Link>
   );
 }

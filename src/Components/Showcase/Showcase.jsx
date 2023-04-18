@@ -19,10 +19,10 @@ export default function Showcase() {
             </b>
           </p>
           <div className="buttons d-flex flex-row gap-10px">
-            <Link to={"/contact"}>
+            <Link to={"/personal-website/contact"}>
               <PrimaryOutlineButton>Contact me</PrimaryOutlineButton>
             </Link>
-            <Link to={"/about"}>
+            <Link to={"/personal-website/about"}>
               <PrimaryButton>About me</PrimaryButton>
             </Link>
           </div>
