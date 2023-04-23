@@ -76,6 +76,7 @@ export default function GeneralAboutMeBox() {
         <div className="d-flex flex-row flex-wrap gap-10px">
           <Tag>JavaScript</Tag>
           <Tag>React.js</Tag>
+          <Tag>Next.js</Tag>
           <Tag>REST API</Tag>
           <Tag>Git & Github</Tag>
           <Tag>Bootstrap</Tag>
