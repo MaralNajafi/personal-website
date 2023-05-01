@@ -7,7 +7,7 @@ import { useLocation } from "react-router-dom";
 const navListItems = [
   {
     name: "home",
-    path: "/personal-website",
+    path: "/personal-website/",
     id: 1,
   },
   {
